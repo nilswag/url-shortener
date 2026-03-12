@@ -4,5 +4,7 @@ services:
       context: ./api
     ports:
       - 3000:3000
+    environment:
+      - PORT=3000
     volumes:
       - ./api:/app
