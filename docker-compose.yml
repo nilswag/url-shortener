@@ -2,9 +2,8 @@ services:
   api:
     build:
       context: ./api
-    ports:
-      - 3000:3000
-    environment:
-      - PORT=3000
+    env_file:
+      - .env
     volumes:
-      - ./api:/app
+      - ./api/src:/app/src
+      - ./api/db:/app/db
